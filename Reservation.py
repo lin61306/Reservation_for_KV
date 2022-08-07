@@ -43,6 +43,7 @@ send_reservarion = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbod
 
 #確認預約資訊
 confirm_reservarion = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[2]/div/a[2]"
+
 def Reservation_doctor():
 
     # 使用 Chrome 的 WebDriver
@@ -69,15 +70,16 @@ def Reservation_doctor():
         print(f'\r{now}', end = '')
         
         #check booking time
-        if (reservation_start_time == now):
+        if (reservation_start_time < now):
             print("start resvation precess")
         
             #refresh chrome
             browser.refresh()
-
+            
             #select docter
             select = browser.find_element(By.XPATH, doctor_name)
-            select.click()
+            print(select.text)
+            select.click() 
             
             #select first/seconds
             select = browser.find_element(By.XPATH, select_1st_or_2nd)
