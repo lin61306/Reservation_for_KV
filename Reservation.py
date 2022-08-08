@@ -24,10 +24,10 @@ reservation_ID = "E221042318"
 reservation_duration = "08/16~08/22"
 
 #預約執行時間
-reservation_start_time = "2022-08-07 17:41:30"
+reservation_start_time = "2022-08-08 07:30:00"
 
 #預約醫生
-doctor_name = "//html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[3]/table/tbody/tr[3]/td[4]/ul/li[3]/div"
+doctor_name = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[3]/table/tbody/tr[3]/td[6]/ul/li[1]/div"
 
 #初診/復診
 select_1st_or_2nd = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[3]/table/tbody/tr[2]/td/span[2]/input"
@@ -43,6 +43,9 @@ send_reservarion = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbod
 
 #確認預約資訊
 confirm_reservarion = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[2]/div/a[2]"
+
+#預約程序排成時間
+schedule_start_time = "07:29"
 
 def Reservation_doctor():
 
@@ -71,7 +74,7 @@ def Reservation_doctor():
         
         #check booking time
         if (reservation_start_time < now):
-            print("start resvation precess")
+            print("\nstart resvation precess")
         
             #refresh chrome
             browser.refresh()
@@ -104,22 +107,19 @@ def Reservation_doctor():
             #end process
             break
         
-        #time.sleep(0.5)
+        time.sleep(0.5)
     # do once
     return schedule.CancelJob
-    # 重新整理
-    # browser.refresh()
+
     # 關閉瀏覽器
     # browser.close()
 
-Reservation_doctor()
+#Reservation_doctor()
 
-#schedule.every().day.at("03:44").do(booking_doctor) #部署在每天的XX:YY执行job()函数的任务
+schedule.every().day.at(schedule_start_time).do(Reservation_doctor) #部署在每天的XX:YY执行job()函数的任务
 
-#done = 0
+while True:
 
-#while done == 0:
+    schedule.run_pending()
 
-    #schedule.run_pending()
-
-    #time.sleep(1)
+    time.sleep(30)
