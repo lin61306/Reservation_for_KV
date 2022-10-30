@@ -19,3 +19,6 @@
 
 (四)Git push code command
 1. git push https://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@github.com/lin61306/Reservation_for_KV.git
+2. format: https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git
+Note: Remember to replace <GITHUB_ACCESS_TOKEN>, <GITHUB_USERNAME>, <REPOSITORY_NAME> with your token, username and repository.
+3.Token: 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
