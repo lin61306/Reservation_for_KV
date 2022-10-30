@@ -20,14 +20,14 @@ section_2 = "免疫風濕科"
 #預約資訊
 reservation_ID = "E221042318"
 
-#預約區間
-reservation_duration = "08/16~08/22"
+#預約區間   (更新預約需修改)
+reservation_duration = "11/09~11/15"
 
-#預約執行時間
-reservation_start_time = "2022-08-08 07:30:00"
+#預約執行時間     (更新預約需修改)
+reservation_start_time = "2022-11-01 07:30:00"
 
-#預約醫生
-doctor_name = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[3]/table/tbody/tr[3]/td[6]/ul/li[1]/div"
+#預約醫生   (更新預約需修改)
+doctor_name = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[3]/table/tbody/tr[3]/td[3]/ul/li[2]/div"
 
 #初診/復診
 select_1st_or_2nd = "/html/body/div[1]/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr/td/div/form/div[2]/table/tbody/tr[2]/td[2]/div[3]/table/tbody/tr[2]/td/span[2]/input"

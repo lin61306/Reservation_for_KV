@@ -1,0 +1,18 @@
+(一)若需更新預約需修改以下資訊:
+1.更新預約區間
+
+2.更新預約執行時間
+
+3.更新預約醫生的fullXpath
+
+(二)若ChromeDriver版本不支援
+1.確認chrome版本
+2.下載對應版本的chromedriver
+3.將下載的chromedriver.exe放至C:\Users\Derrick\AppData\Local\Programs\Python\Python38(預設路徑)
+	reference: https://blog.csdn.net/weixin_46308904/article/details/109306234
+	chromedriver download link: http://chromedriver.storage.googleapis.com/index.html
+
+(三)建立python執行檔
+1. comand: pyinstaller -F filename.py
+2. 建好的執行檔會在./dist/
+3. 建議使用管理員權限開啟
