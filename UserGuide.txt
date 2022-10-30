@@ -16,3 +16,6 @@
 1. comand: pyinstaller -F filename.py
 2. 建好的執行檔會在./dist/
 3. 建議使用管理員權限開啟
+
+(四)Git push code command
+1. git push https://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@github.com/lin61306/Reservation_for_KV.git
