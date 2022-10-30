@@ -18,7 +18,9 @@
 3. 建議使用管理員權限開啟
 
 (四)Git push code command
-1. git push https://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@github.com/lin61306/Reservation_for_KV.git
+1. git push https://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@github.com/lin61306/Reservation_for_KV.git
 2. format: https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git
 Note: Remember to replace <GITHUB_ACCESS_TOKEN>, <GITHUB_USERNAME>, <REPOSITORY_NAME> with your token, username and repository.
-3.Token: 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
+3.Token: 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
+4. GitHub -> setting(右上) ->  Developer settings(最底下) -> Personal access tokens -> Generate new token -> set repo -> Gererate token -> save token code immediately.
+	reference: https://techglimpse.com/git-push-github-token-based-passwordless/
